@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Components</title>
+</head>
+<body>
+    <h1>Components</h1>
+    <p>In react a component represents a part of the user interface.We have 5 applications 
+        <ul>
+            <li>
+                Header
+                SideNav
+                MainContent
+                Footer
+                Root(App) Component.
+            </li>
+        </ul>
+    <p>Components are resusable.It also contains other components.It is mainly placed in the javascript file and can be nested inside other components.</p>
+    <h3>Two Types of Components</h3>
+       <ul>
+        <li>
+            Stateless Component: It is a simple function that returns JSX. It does not have its own state and lifecycle methods.It is javascript functions that return HTML which describes the UI.
+        </li>
+        <li>
+            stateful class component: It is a class that extends React.Component and has its own state and lifecycle methods.They extend component class from reactive library and have access to lifecycle methods and state management.
+            <h2>Class extending Component class</h2>
+            <div>It is a rendering method that returns HTML</div>
+        </li>
+       </ul>
+    </p>
+    <h2>Functional Components</h2>
+    <p>Functional Components are javascript functionerreds,they can recieve an object of properties which is referred to as props and return HTML which describes the UI now the HTML is actually something</p>
+    <p>In the components we can use arrow functions also instead of functions.</p>
+
+     <h2>Exporting and Importing</h2>
+    <p>when it is exported with the variable itself it is named as export</p>
+
+    <h2>Class Components</h2>
+    <p>Components in the react class components are basically es6 classes.It can optionally recieve props as input and return HTML.Unlike the functional component a class component also can optionally receive props as input and return HTML apart from the props a class component can also maintain a private internal state which is an information about that is used to describe the user interface to get a comparison.</p>
+    in the class components we need to import React from 'react' and then we need to extend the component class from the react library and then we need to define the render method which returns the HTML that we want to display in the browser.
+
+    <h3>Functional Components VS Class Components</h3>
+    <h4>Functional Components</h4>
+    <ul>
+        <li>
+            It is simple functions
+        </li>
+        <li>Use Func components as much as possible</li>
+        <li>Absence of 'this' keyword</li>
+        <li>Solution without using state</li>
+        <li>Mainly responsible for the UI</li>
+        <li>Stateless/Dumb/Presentational</li>
+    </ul>
+    <h4>Class Components</h4>
+    <ul>
+        <li>More feature rich</li>
+        <li>maintain their own private data-state</li>
+        <li>Complex UI logic</li>
+        <li>Provide lifecycle hooks</li>
+        <li>Stateful/Smart/Container</li>
+
+    </ul>
+    <h2>Introducing Hooks</h2>
+    <p>Hooks are a new feature proporsal that let's you use the state and other React features without writing a class.They are currently in React v16.7.0-alpha and being discussed in an open RFC.</p>
+    <p>Hooks are functions that let you hook into React state and lifecycle features from function components.</p>
+    <p>It has no breaking changes and it is completely opt-in & 100% backwards-compatible.Using state,lifecycle methods and 'this' binding.</p>
+    <h2>JSX</h2>
+    <p>JavaScript XML (JSX)-Extension to the JavaScript language syntax.Write XML-like code for elements and components.They have tagnames,attributes and children like HTML</p>
+    <p>JSX is not a necessity to write React applications.</p>
+    <p>JSX  makes your react code simpler and elegant</p>
+    <p>JSX ultimately transpiles to pure JavaScript which is understood by the browsers.</p>
+
+    <h2>JSX differences</h2>
+    <p>Class-> className</p>
+    <p>for-> htmlFor</p> it is a reserved keyword in javascript.
+    <p>camelCase property naming convension</p>
+    <li>onclick -> onClick</li>
+    <li>tabindex -> tabIndex</li>
+
+    <h2>Props</h2>
+    <p>Props short name for property is an optional input that your component can accept.</p>
+    <p>Props is just an object that contains the attributes and values which have been passed from the parent.</p>
+    <p>Inorder to identify the props by the react we need to put them inside the curly braces.Braces is a feature of JSX which is really helpfull and is used as really helpful and is used a lot in the react applications.</p>
+    <p>In class components we use "this"ie., here the this.props is reserved.Basically props are immutable or in simpler words thier value cannot be changed in our</p>
+    <p>So since this props are immutable we need another object called states where our code need a dynamic change.</p>
+    <h2>State Vs Props</h2>
+    <h3>Props</h3>
+    <ul>
+        <li>
+            Props are immutable and cannot be changed by the component that receives them.
+            props get passed to the component.
+            Funtion parameters
+            props- Functional components this.props-Class Components.
+        </li>
+    </ul>
+    <h3>State</h3>
+    <ul>
+        <li>
+            State is managed within the component and can be changed by the component itself.
+            State is mutable and can be changed by the component that owns it.
+            Variables declared inside the function <body>
+            useState Hook- Functional Components this.state- class Components.
+            </body>
+        </li>
+    </ul>
+    <h3>SetState</h3>
+    <p>This is asynchronous function.So we need a Callback value here.</p>
+
+    <h3>setState</h3>
+    <p>Always make use of setState and never modify the state directly.Code has to be executed after the state has been updated?Place that code in the call back funtion which is the second argument to the setState method.
+        When you have to upadate state based on the previous state value,pass in a function as an argument instead of the regular Object.
+    </p>
+   <h3>Destructuring</h3>
+   <p>It is a feature in es6 that makes it possible to unpack values from arrays or properties.In react it improves code stability.</p>
+   <div>How to handle events in the React</div>
+   <h3>Binding event Handlers</h3>
+   <p>This is mainly used to solve the chaos that arrise when using the 'this' constructor in the JavaScript.There are several metheds in the eventbinding.</p>
+   <ul>
+    <li>Using arrow methods in the render function</li>
+    <li>Using bind.this in the render method.</li>
+    <li>This is the official approach in the React that deals with binding the event handler in the constructor as opposed to binding in the render method .</li>
+   </ul>Props
+   <h3>Methods as Props</h3>
+   <h3>Conditional Rendering</h3>
+   <ul>
+    <li>if/else</li>
+    <li>Element variables</li>
+    <li>Ternary conditional operator</li>
+    <li>Short circuit operator</li>
+   </ul>
+    <p>The if-else statements cannot be added inside the JSX it can be only added outside the JSX.</p>
+    <h3>Lists Rendering</h3>
+    <p>In react we can render lists of elements using the map function.</p>
+    <p>We can also use the key prop to identify which items have changed, are added, or are removed.</p>
+    <p>Map() method creates a new array with the results of calling a provided function on every element in the calling array.</p>
+    <h3>List and keys</h3>
+    <p>keys help react to identify which terms in a list have changed or not and place a very crucial role in handling the UI upadates efficiently.It is a special string attribute you need to include when creating lists of elements.Key give the elements a stable identity.Keys help React identify which items have changed,are added,or are removed.Help in efficient update of the user interface.</p>
+    <h3>Index as Key Anti-pattern</h3>
+    <h3>When use index and key</h3>
+    <ul>
+        <li>The items in your list do not have a unique id.</li>
+        <li>The list is a static list and will not change.</li>
+        <li>The list will never be recordered or filered.</li>
+    </ul>
+    <h3>Styling React Components</h3>
+    <li>
+        css stylesheets
+        inliline styles
+        css modules
+        css in js libraries
+    </li>
+    <h3>Controlled components</h3>
+    <div>The values which are controlled by the react is called as controlled components</div>In the controlled component the value of the input field is set to the state variable and the onChange event handler is used to update the state variable whenever the user types something in the input field.This way the value of the input field is always in sync with the state variable and we can easily access the value of the input field from the state variable.</p>
+    <h3>lifecycle Methods</h3>
+    <p>This are some inbuilt react components available in the class components which is not availble in the functional components.</p>
+    <h1>Classify into 4 types</h1>
+    <ul>
+        <li>
+            Mounting: It is the process of creating and inserting the component into the DOM for the first time.
+            <ul>
+                <li>constructor</li>
+                <li>getDerivedStateFromProps</li>
+                <li>render</li>
+                <li>componentDidMount</li>
+            </ul>
+            <li>
+                Updating: It is the process of updating the component when there is a change in the state or props.
+                <ul>
+                    <li>getDerivedStateFromProps</li>
+                    <li>shouldComponentUpdate</li>
+                    <li>render</li>
+                    <li>getSnapshotBeforeUpdate</li>
+                    <li>componentDidUpdate</li>
+                </ul>
+                <ul>
+                    <li>
+                        Unmounting: It is the process of removing the component from the DOM.
+                        <ul>
+                            <li>componentWillUnmount</li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <li>
+                    error handling: It is the process of handling the errors that occur in the component.
+                    <ul>
+                        <li>componentDidCatch</li>
+                        <li>getDerivedStateFromError</li>
+                    </ul>
+                </li>
+            </li>
+        </li>
+    </ul>
+    <h3>Mounting lifecycle Methods</h3>
+    <ul>
+        <li>constructor: It is the first method that is called when the component is created.It is used to initialize the state and bind the methods.A special function that will get called whenever a new component is created.Initializing state Binding the event handlers</li>
+        <p>Do not cause side effects.Ex:HTTP requests.</p>
+        <li>getDerivedStateFromProps: It is called before the render method and it is used to update the state based on the propsWhen the state of the component depends on changes in props over time.It is a static method,set the state.(props,state)</li>
+        <li>render: It is the method that returns the JSX that will be rendered in the browser.Only required method read props and state and return JSX.Do not change state or interact with DOM or make ajax calls.</li>
+        <li>componentDidMount: It is called after the component is mounted in the DOM.It is used to make API calls or perform any other side effects.Invoked immedialtly afer a component and all its children components have been rendered to the DOM.Cause side effects.Ex Interact with the DOM or perform any ajax calls to load data.</li>
+        <h3>Updating lifecycle Methods</h3>
+        <li>Staic getDerivedStateFromProps</li>
+        <p>Method is called every time a component is re-rnedererd</p>
+        Set the state ,Do not cause side effects,Ex:HTTP requests.
+        <h3>shouldComponentUpdate(nextProps,nextState)</h3>
+        <p>Dictates if the component should re-render or not.</p>
+        <p>It is called before the render method and it is used to optimize the performance of the component by preventing unnecessary re-renders.</p>
+        <p>It is used to compare the current props and state with the next props and state and return true or false.</p>
+        <h3>getSnapshotBeforeUpdate></h3>
+        <p>Called right before the changes from the virtual DOM are to be reflected in the DOM.</p>
+        <p>Capture some information from the DOM</p>
+        <p>It is used to capture some information from the DOM before the changes are made to the DOM.</p>
+        <h3>componentDidUpdate(prevProps,prevState,snapshot)</h3>
+        <p>It is called after the component is updated in the DOM.</p>  
+        <p>It is used to perform any side effects after the component is updated in the DOM.</p>
+        <p>It is used to compare the previous props and state with the current props and state and perform any side effects.</p>
+
+        <h3>Unmounting lifecycle Methods</h3>
+        <li>componentWillUnmount: It is called before the component is removed from the DOM.It is used to perform any cleanup tasks like cancelling API requests or removing event listeners.</li>
+        <h3>Error Handling lifecycle Methods</h3>   
+        <li>static getDerivedStateFromError(error): It is called when an error occurs in the component.It is used to update the state to show an error message.</li>
+        <li>componentDidCatch(error,info): It is called when an error occurs in the component.It is used to log the error and show an error message.</li>
+        <h3>Fragments</h3>
+        <p>Fragments let you group a list of children elements without adding extra nodes to the DOM.</p>
+
+        <h3>Pure Components</h3>
+        <p>Pure components are the components that do not re-render if the props and state are not changed.</p>
+        <p>It is a component that extends the React.PureComponent class and implements the shouldComponentUpdate method.</p>
+        <p>It is used to optimize the performance of the component by preventing unnecessary re-renders.</p>
+        <h3>Difference Between Pure Component and Regualar Component</h3>
+        <h4>Regualar Component</h4>
+        <p>A regular component does not implement the shouldContentUpdate method.It always returns true by default</p>
+        <h4>Regular Components</h4>
+        <p>A pure component on the other hand implements shouldComponentUpdate with a shallow props and state comparison.</p>
+         <p>In react we can create a component by extending the PureComponent class.</p>
+         <h3>React.Memo</h3>
+         <h3>React and HTTP</h3>
+         <p>Inorder to fetch the data into your components props or states must be read to render the UI.We need an HTTP library for that.Since react will not do requests.Fetch API's are also a better option.</p>
+         <h3>How to create a react app</h3>
+         <p>npx-create-</p>
+         <p>cd.\hello-world</p>
+         npx start
+         <h3>React Hooks</h3>
+         <p>Hooks are a new feature addition in React which allows us to use React features without having to write a class.</p>
+         ex:State of a Component.
+         <h3>Why Hooks</h3>
+         <h4>Reason Set:1</h4>
+         <ul>
+            <li>
+                understand how this keyword works in JavaScript.
+            </li>
+            <li>Remember to bind event handlers in class components.</li>
+            <li>Classes don't minify very well and make hot reloading very unreliable.</li>
+         </ul>
+         <h4>Reason Set:2</h4>
+         <ul>
+            <li>There is no particular way to reuse stateful component logic</li>
+            <li>HOC and render props patterns do address this problem</li>
+            <li>Makes the code harder to follow</li>
+            <li>There is need a to share stateful logic in a better way.</li>
+         </ul>
+         <h4>Reason Set:3</h4>
+         <ul>
+            <li>create components for complex scenarios such as data fetching and subscribing to events</li>
+            <li>Related code is not organized in one place.</li>
+            <li>Data fetching-In componentDidMount and componentDidUpdate</li>
+            <li>Event listeners-In componentDidMount and componentWillUnmount</li>
+            <li>Because of stateful logic- cannot break components into smaller ones.</li>
+         </ul>
+         <h3>Rules of Hooks</h3>
+         <p>Only Call Hooks at the top level.Dont call Hooks inside loops,conditions,or nested functions</p>
+         <p>Only Call Hooks form React Functions>Call them within React functional components and not just any regular JavaScript</p>
+    </ul>
+    <h3>useState</h3>
+    <ul>
+        <li>The usestate hook lets you add state to function components</li>
+        <li>In classes,the state is always an object.</li>
+        <li>With the useState hook,the state doesn't have to be an object.</li>
+        <li>The useState hook returns an array with 2 elements.</li>
+        <li>The first element is the current value of the state,the secondelement is a state setter function.</li>
+        <li>New state value depends on the previous state value?You can pass a function to the setter function.</li>
+        <li>When dealing with objects or arrays,always make sure to spread your state variable and then call the setter function.</li>
+
+    </ul>
+    <h3>useEffect</h3>
+    <p>The effect Hook lets you perform side effects in functional components</p>
+    <p>It is a close replacement for componentDidUpdate,componentDidMount and componentWillUnmount.It is called after every single render.</p>
+    <h3>How to Fetch individual data</h3>
+    <p>We need to fetch individual data</p>
+    <h3>Fetching data using Effect</h3>
+    <h3>Use Context</h3>
+    <p>Context provides a way to pass data through the component tree without having to pass props down manually at every level.</p>
+    <h3>useReducer</h3>
+    <p><li>useReducer is a hook that is used for state management.</li></p>
+    <li>It is an alternative to useState</li>
+    <li>useState is built using useReducer</li>
+    <h3>Hooks so far </h3>
+    <ul>
+        <li>useState - states</li>
+        <li>useEffect - side effects</li>
+        <li>useContext - context API</li>
+        <li>useReducer - reducers</li>
+    </ul>
+    <h3>reduce vs useReducer</h3>
+    <h4>reduce in JS</h4>
+    <ul>
+        <li>array.reducer,initialValue</li>
+        <li>SingleValue = reducer(accumulator,itemValue)</li>
+        <li>Reduce method returns a single value</li>
+
+    </ul>
+    <h4>useReducer in React</h4>
+    <ul>
+        <li>array.reducer,initialState</li>
+        <li>newState = reducer(currentState,action)</li>
+        <li>useReducer returns a pair of values.[newState,dispatch]</li>
+    </ul>
+  <p>useReducer is a hook that is used for state management in react</p>
+  <p>useReducer is related to reducer functions</p>
+  <p>useReducer(reducer,initial state)</p>
+  <p>reducer(currentState,action)</p>
+  <h3>useReducer with useContext</h3>
+  <p>useReducer -local state management</p>
+  <p>share state Between components- Global state manangement.</p>
+  <p>useReducer + useContext</p>
+  <h3>Fetching data using useEffect Hook</h3>
+  <h3>Fetching data using useReducer Hook</h3>
+  <p>Here in the useReducer inorder to fetch the data we use <strong>switch key</strong> methods</p>
+  <h3>Main points to review and revise</h3>
+  <ul>
+    <li>
+        <li>Components</li>
+        Types of Components
+        Functional Components
+        Class Components.
+        Introducing Hooks
+        JavaScript XML (JSX)
+        Props
+        states
+        SetState
+        Destructuring
+        Binding event Handlers
+        Styling React Components
+        Controlled Components
+        lifecycle Methods
+        List and keys
+    </li>
+  </ul>
+  <h3>useState vs useReducer</h3>
+  <table>
+    <tbody>
+        scenario
+        useState
+        useReducer
+    </tbody>
+    <td>
+        Type of state : Number,string,Boolean : Object or array
+        Number of state transitions : one or two : too many 
+        related state transitions : No : yes
+        Bussiness logic : No bussiness logic : Complex bussiness logic
+        Local vs Global : Local : Global
+
+    </td>
+  </table>
+  <h3>Use Callback Hook</h3>
+  <h3>React.Memo</h3>
+  <p>It is a higher order component that will prevent a functional component from being rear-ended if it's props or state do not change please keep in mind react.memo has nothing to do with HOOOKS.</p>
+  <h3>useCallback Hook</h3>
+  <p>useCallback is a hook that will return a memoized version of the callback function that only changes if one of the dependencies has changed.</p>
+  <p>It is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders.</p>
+  <p style="color:darkred">To render the result of a component use 'useMemo'</p>
+  <p style ="color:darkred">To render the component use the callback function</p>
+  <h3>useRef Hook</h3>
+  <p>It helps us to possible to access DOM nodes directly within functional components.</p>   
+  <h3>Use imperative handle</h3>
+  <h3>Use layout effect</h3>
+  <h3>use debug value?You</h3>
+  <h3>Custom Hooks</h3>
+  <p>A custom Hook is basically a javascript function whose name starts with 'use'.</p> 
+  <p>A custom hook can also call other Hooks if required.</p>
+  Why Is is used to share logic - alternative to HOCs and Render Props.
+  <h3>React Elements</h3>
+  <p>They are javascript objects that describes the structure of the ui.</p>
+  <h3>Re-render scenario</h3>
+  
+  <p>Render Phase</p>
+  <ul>
+    <li>Find all elements flagged for update.</li>  
+    <li>For each flagged component,convert JSX to React element and store the result.</li>
+    <li>Perform reconciliation - Diff old and new tree of React elements (called Virtual DOM)</li>
+    <li>Hand over the changes to the next Phase.</li>
+    
+  </ul>
+  <p>Commit Phase</p>
+  <ul>
+    <li>Apply changes to the DOM.</li>  
+  </ul>
+  <h3>useState and Render</h3>
+  <ul>
+    <li>The setter function from a useState hook will cause the component to re-render.</li>.
+    <li>The exception is when you update a state Hook to the same value as the current state</li>
+    <li>Same value after the initial render,then the component will not re-render.</li>
+    <li>Same value after re-renders ,then React will render that specific component one more time and then bails out from any susequent renders.</li>
+    <h3>UseReducer and Render</h3>
+
+ <ul>
+    <li>The dispatch funtion from a useReducer hook will cause the component to re-render.</li>.
+    <li>The exception is when you update a state Hook to the same value as the current state</li>
+    <li>Same value after the initial render,then the component will not re-render.</li>
+    <li>Same value after re-renders ,then React will render that specific component one more time and then bails out from any susequent renders.</li>
+    </ul>
+
+</ul>
+  <h3>State Immutability and Render</h3>
+  <ul>
+    <li>Mutating an object or an array as state will not cause a re-render when used with the useState or useReducer hook</li>
+    <li>To re-render ,make a copy of the existing state,modify as necessary and then pass the new state to the setter function or while returning from a reducer function.</li>
+    <li>Directly Mutating the state is an easy way to create bugs in our app</li>
+  </ul>
+  </ul>
+  <h3>Causes for render</h3>
+  <ul>
+    <li>A component can re-render if it calls a setter function or a dispatch function</li>
+    <li>A component can re-render if its parent component rendered.</li>
+  </ul>
+  <h3>React.memo</h3>
+  <p>It is a higher order component which we can use to wrap components if they render same result given the same props.</p>
+
+  <h1>Code malayalam</h1>
+  <p>HOOKS useMemo and useCallback both are used for render controlling.</p>
+  <p>React renders all the elements evenif there is no change in the child components.So in the funtional components this rendering is controlled by the inbuilt Hook called React.memo().It is a higher order-component.This returns a new component.</p>
+  <p>The page is only rendered during the initial loading time and then it is re-rendered only when any change are made in the props.</p>
+  <p>When objects are passed as props the component renders it is becos in the case of objects, we compare the references intead of the value so the react assumes that the object has changed and so it re-renders everytime.So inorder to solve this we use useMemo Hook.</p>
+  <p>In the use.Memo we pass two arguments the object and an array.</p>
+  <p>Along with the activestate we should also use the dependency too ie., pass the dependency in the array.</p>
+  <p>This issue is not only in the case of objects but this reference issue is with regarding all the primitive data types.ie.,functions,arrays,maps or anything...</p>
+  <h2>Callback Hooks</h2>
+  <p>If two functions are there inside a function we use another hook known as Usecallback.This is also used for memorizations.which is only for the functions..</p>
+</html>
+
+
+
+
+
