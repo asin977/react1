@@ -438,6 +438,25 @@
   <p>This issue is not only in the case of objects but this reference issue is with regarding all the primitive data types.ie.,functions,arrays,maps or anything...</p>
   <h2>Callback Hooks</h2>
   <p>If two functions are there inside a function we use another hook known as Usecallback.This is also used for memorizations.which is only for the functions..</p>
+  <p> git config --global init.defaultBranch</p>
+  <h3>UseRef</h3>
+  <p>React always does everything in a virtual DOM.And the react framework pulls the virtual DOM content into the Orginal DOM. but in several cases we need to access the DOM instead of the virtual DOM so for that we introduced a new hook called useRef Hook.Ref is a prop..Mainly used in tooltips.to do drag and drops.</p>
+  <p>Inorder to align the tooltips to center or upto the correct position.. we need to get the exact DOM so for these cases we use the ref..an inside the ref we use an object and inorder to make that object we use the hook-useRef() and we make an object and we must provide a current value inside the function.And this element must be only made once inside the element.</p>
+  <h3>ForwardRef</h3>
+  <p>When we need to call the functions which are in the sepearate functions we use the ForwardRef Hook.If the child ref is required in the parent DOM we use this Hook.For that we wrap this whole function into the React.ForwardRef() function..Which returns a new component.</p>
+  <h3>UseImperativeHook</h3>
+  <p>We usually pass the props from parent element to child elements but in some rare cases we might need to pass the props from the child element to the parent element so for such cases we use the UseImperativeHooks..</p>
+
+  <h3>useLayoutEffect</h3>
+  <p>It is simillar to the useEffect Hook,where the useLayoutEffect is <strong>Synchronous</strong> and the useEffect Hook is <strong>Asynchronous</strong></p>
+  <p>JavaScript is a single threaded event loop.</p>
+  <h3>Custom Hooks</h3>
+  <p>It is mainly used to reuse the logic of the hooks in different place in the functional components.Since these hooks can be reused the hooks are written in a sepearate file usually..So basically a custom hook is a wrapper function of all the hooks that we have coded for our usage.Its name must always starts with the use'..'.It must be written on the top level of the function in the programming code.It must not be written inside any conditions or loops..</p>
+
+  <h3>UseDebug value</h3>
+  <p>It is mainly used to see the data generated from the custom hooks.This has two arguments one is a function and this function returns what is required to be printed by the function.</p>
+  <h3>UseReducer Hook</h3>
+  <p>This is simillar to the useState hook which is mainly used to manage State in Functional Component.</p>
 </html>
 
 
