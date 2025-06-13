@@ -456,7 +456,34 @@
   <h3>UseDebug value</h3>
   <p>It is mainly used to see the data generated from the custom hooks.This has two arguments one is a function and this function returns what is required to be printed by the function.</p>
   <h3>UseReducer Hook</h3>
-  <p>This is simillar to the useState hook which is mainly used to manage State in Functional Component.</p>
+  <p>This is simillar to the useState hook which is mainly used to manage State in Functional Component.In the case of complex states we use usereducer instead of the useState hook..and vice-versa.for instance when we want to use an object whole as a state we use this .It is used when the states are branched towards multiple children.ie., update state from child..</p>
+  <h3>useReducer() Features..</h3>
+  <p>The pattern of the useState is different from the useReducer.Here we will be having 2 arguments one a state and another a dispatcher which is used to set the state.Here the dispatcher will not directly update the function,like the setState in the usestate but instead the usereducer dispatcher uses a reducer function for that.The reducer will be the function written by us.and that will be given as an argument.We cannot write the functions inside the reducer since it is a Pure Function.Since the output depends only on input arguments.</p>
+  <p>Inside the reducer function we can provide two arguments ie.,
+    <ul>
+        <li>The prevState</li>
+        <li>The argument provided in the dispatch ie., called as <strong>Action</strong></li>
+
+    </ul>
+  </p>
+  <p>The action must be an object.</p>
+  <p>We use the payLoad to do this in the useReducer.this will be having a type and a payload the action type can be given as a constant..</p>
+  <p>In the git  we should type these following codes. ie., 
+    <ul>
+        <li>ls</li>
+        <li>pwd</li>
+        <li>cd Desktop</li>
+        <li>mkdir sample</li>
+        <li>cd sample</li>
+        <li>git init</li>
+        <li>touch-readme</li>
+        <li>git add</li>
+        <li>git commit -m 'name'</li>
+        <li>git status</li>
+        <li>git remote add origin</li>
+        <li>git push</li>
+    </ul>
+  </p>
 </html>
 
 
